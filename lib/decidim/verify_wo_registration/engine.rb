@@ -20,10 +20,6 @@ module Decidim
           mount Decidim::VerifyWoRegistration::Engine => '/verify_wo_registration'
         end
       end
-
-      initializer 'decidim_verify_wo_registration.assets' do |app|
-        app.config.assets.precompile += %w[decidim_verify_wo_registration_manifest.js decidim_verify_wo_registration_manifest.css]
-      end
     end
   end
 end
